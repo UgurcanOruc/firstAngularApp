@@ -51,3 +51,6 @@ Then type ng serve
     ** Note that in order to do that, use cmd window in VS Code.
 
 npm install --save bootstrap@{version} is the bootstrap installer
+
+
+Bu bi değişiklik.
