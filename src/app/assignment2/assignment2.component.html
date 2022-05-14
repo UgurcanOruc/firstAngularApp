@@ -1,0 +1,13 @@
+<div class="mt-4">
+    <p class="fw-bold fs-5">Create your User</p>
+
+    <input type="text" class="form-control" [(ngModel)]="userName">
+
+    <p>{{ userName }}</p>
+    
+    <div class="d-flex justify-content-end">
+        <button class="btn btn-warning mt-2 d-flex justify-content-end" 
+        (click)="onCreateUser()"
+        [disabled]="userName === ''">Add User</button>
+    </div>
+</div>

@@ -48,9 +48,6 @@ Type cd {projectName}
 
 Then type ng serve
 ** This above two commands helps you open project in browser.
-    ** Note that in order to do that, use cmd window in VS Code.
+    ** Note, in order to do that, use cmd window in VS Code.
 
 npm install --save bootstrap@{version} is the bootstrap installer
-
-
-Bu bi değişiklik.

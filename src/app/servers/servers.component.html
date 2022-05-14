@@ -1,4 +1,25 @@
-<app-server></app-server>
-<success-alert></success-alert>
-<app-server></app-server>
-<warning-alert></warning-alert>
+<!-- Server Elements -->
+<div>
+    <label>Server Name</label>
+    <!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)" > -->
+
+    <input type="text" class="form-control" [(ngModel)]="serverName">
+    <!-- <p>{{ serverName }}</p> -->
+
+    <div class="d-flex justify-content-end">
+        <button class="btn btn-warning mt-2 d-flex justify-content-end" (click)="onCreateServer()"
+            [disabled]="!allowNewServer">Add Server</button>
+    </div>
+    <!-- <p [innerText]="allowNewServer"></p> -->
+    <p class="mt-2">{{ serverCreationStatus }}</p>
+</div>
+
+<!-- User Elements -->
+<app-assignment2></app-assignment2>
+
+<div class="mt-5">
+    <app-server></app-server>
+    <success-alert></success-alert>
+    <app-server></app-server>
+    <warning-alert></warning-alert>
+</div>
