@@ -1,0 +1,7 @@
+<button class="form-control btn btn-info" (click)="toggleSpan()">Display Details</button>
+<span *ngIf="toggleSpanValue">Secret Password = Tuna</span>
+<p *ngFor="let event of logBtnToggleEvent" class="mt-3" 
+   [ngClass]="{'alert': isLogsLengthGreaterThanFive(), 'alert-info': isLogsLengthGreaterThanFive() }"
+   [ngStyle]="color: isLogsLengthGreaterThanFive() ? 'red' : ''"> 
+--> {{ event }} 
+</p>

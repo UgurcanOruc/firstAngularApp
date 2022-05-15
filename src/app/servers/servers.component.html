@@ -1,25 +1,33 @@
-<!-- Server Elements -->
-<div>
-    <label>Server Name</label>
-    <!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)" > -->
+<div class="form-control">
+    <!-- Server Elements -->
+    <div class="form-control">
+        <label>Server Name</label>
+        <!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)" > -->
 
-    <input type="text" class="form-control" [(ngModel)]="serverName">
-    <!-- <p>{{ serverName }}</p> -->
+        <input type="text" class="form-control" [(ngModel)]="serverName">
+        <span *ngIf="serverCreated">Server was created, server name is {{ serverName }}</span>
 
-    <div class="d-flex justify-content-end">
-        <button class="btn btn-warning mt-2 d-flex justify-content-end" (click)="onCreateServer()"
-            [disabled]="!allowNewServer">Add Server</button>
+        <!-- <p>{{ serverName }}</p> -->
+        <!-- <span *ngIf="serverCreated; else noServer">Server was created, server name is {{ serverName }}</span>
+    <ng-template #noServer>
+        <span>
+            No server was created.
+        </span>
+    </ng-template> -->
+
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-warning mt-2 d-flex justify-content-end" (click)="onCreateServer()"
+                [disabled]="!allowNewServer">Add Server</button>
+        </div>
+        <!-- <p [innerText]="allowNewServer"></p> -->
+        <!-- <p class="mt-2">{{ serverCreationStatus }}</p> -->
     </div>
-    <!-- <p [innerText]="allowNewServer"></p> -->
-    <p class="mt-2">{{ serverCreationStatus }}</p>
+
+    <div class="mt-5">
+        <app-server *ngFor="let server of servers"></app-server>
+    </div>
+
 </div>
 
-<!-- User Elements -->
-<app-assignment2></app-assignment2>
 
-<div class="mt-5">
-    <app-server></app-server>
-    <success-alert></success-alert>
-    <app-server></app-server>
-    <warning-alert></warning-alert>
-</div>
+<app-assignments></app-assignments>
