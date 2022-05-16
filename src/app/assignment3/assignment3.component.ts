@@ -15,8 +15,8 @@ export class Assignment3Component implements OnInit {
   }
 
   toggleSpan() {
-    this.toggleSpanValue = this.toggleSpanValue === true ? false : true;
-    this.logBtnToggleEvent.push(this.toggleSpanValue === true ? 'Showed at ' + new Date() : 'Hided at ' + new Date())
+    this.toggleSpanValue = !this.toggleSpanValue;
+    this.logBtnToggleEvent.push(new Date())
   }
   
   isLogsLengthGreaterThanFive() {
