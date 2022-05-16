@@ -28,26 +28,29 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 
+## Developer Notes
 
-First if you have nodeJS installed on your computer. Delete it and download latest version.
-Then type cmd, run as administrator and type;
+-> First if you have nodeJS installed on your computer. Delete it and download latest version.
+
+-> Then type cmd, run as administrator and type;
     - npm install -g @angular/cli@latest
-After that if you have a file already, you can type:
+
+-> After that if you have a file already, you can type:
     - cd {FOLDERPATH}
 
-If you dont:
+-> If you dont:
     - ng new {FOLDERPATH} 
     - cd {FOLDERPATH}
 
-Then type your new project name:
+-> Then type your new project name:
     - ng new {projectName} --no-strict
     - Then type n for No
     - Then double click enter to load CSS
 
-Type cd {projectName}
+-> Type cd {projectName}
 
-Then type ng serve
+-> Then type ng serve
 ** This above two commands helps you open project in browser.
     ** Note, in order to do that, use cmd window in VS Code.
 
-npm install --save bootstrap@{version} is the bootstrap installer
+-> npm install --save bootstrap@{version} is the bootstrap installer
